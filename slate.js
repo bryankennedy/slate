@@ -1,15 +1,14 @@
-# Configs
-# TODO Why?
-config defaultToCurrentScreen true
-config nudgePercentOf screenSize
-config resizePercentOf screenSize
-config secondsBetweenRepeat 0.1
-config checkDefaultsOnLoad true
-config focusCheckWidthMax 3000
-config windowHintsShowIcons true
-config windowHintsIgnoreHiddenWindows false
-config windowHintsDuration 5
-config windowHintsSpread true
+// Configs
+S.cfga({
+  "defaultToCurrentScreen" : true,
+  "secondsBetweenRepeat" : 0.1,
+  "checkDefaultsOnLoad" : true,
+  "focusCheckWidthMax" : 3000,
+  "windowHintsShowIcons" : true,
+  "windowHintsIgnoreHiddenWindows" : false,
+  "windowHintsDuration" : 5,
+  "windowHintsSpread" : true
+});
 
 # Resize Bindings
 #
