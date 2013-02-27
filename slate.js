@@ -46,7 +46,7 @@ bind 2:ctrl;alt         throw 1 resize
 bind 3:ctrl;alt         throw 2 resize
 bind right:ctrl;alt;cmd throw right resize
 bind left:ctrl;alt;cmd  throw left  resize
-bind down:ctrl;alt;cmd screenOriginX;screenOriginY screenSizeX;screenSizeY
+#bind down:ctrl;alt;cmd screenOriginX;screenOriginY screenSizeX;screenSizeY
 
 # Focus Bindings
 # TODO - Find new bindings for these
