@@ -38,6 +38,8 @@ var dellBottomMid = dellBottomLeft.dup({ "x" : "screenOriginX+screenSizeX/3" });
 var dellBottomRight = dellBottomLeft.dup({ "x" : "screenOriginX+2*screenSizeX/3" });
 var dellLeft = dellTopLeft.dup({ "height" : "screenSizeY" });
 var dellRight = dellTopRight.dup({ "height" : "screenSizeY" });
+var dellMid = dellFull.dup({ "x" : "screenSizeX/4", "width" : "screenSizeX/2" });
+var dellMidWide = dellFull.dup({ "x" : "screenSizeX/6", "width" : "screenSizeX/1.5" });
 
 // common layout hashes
 var lapMainHash = {
@@ -143,8 +145,8 @@ S.bnda({
   "pad.:ctrl" : lapMain,
   "]:ctrl" : lapMain,
   "pad1:ctrl" : dellBottomLeft,
-  "pad2:ctrl" : dellBottomMid,
-  "pad3:ctrl" : dellBottomRight,
+  "pad2:ctrl" : dellMid,
+  "pad3:ctrl" : dellMidWide,
   "pad4:ctrl" : dellLeft,
   "pad5:ctrl" : dellFull,
   "pad6:ctrl" : dellRight,
