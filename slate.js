@@ -30,7 +30,18 @@ var dellFull = S.op("move", {
         "height" : "screenSizeY"
 });
 var dellTop = dellFull.dup({ "height" : "screenSizeY/2" });
-var dellTopLeft = dellTop.dup({ "width" : "screenSizeX/2" });
+var dellIsh = dellFull.dup({
+        "width" : "screenSizeX/1.2",
+        "height" : "screenSizeY/2.3",
+        "x" : "screenOriginX + screenSizeX/14"
+    });
+var dellTopish = dellIsh.dup({
+        "y" : "screenOriginY + screenSizeY/20"
+    });
+var dellBottomish = dellIsh.dup({
+        "y" : "screenOriginY + ((screenSizeY/22) * 11)"
+    });
+var dellTopLeft = dellTopish.dup({ "width" : "screenSizeX/1.2" });
 var dellTopRight = dellTopLeft.dup({ "x" : "screenOriginX+screenSizeX/2" });
 var dellBottom = dellTop.dup({ "y" : "screenOriginY+screenSizeY/2" });
 var dellBottomLeft = dellBottom.dup({ "width" : "screenSizeX/3" });
@@ -156,12 +167,12 @@ S.bnda({
   "5:ctrl" : dellFull,
   "pad6:ctrl" : dellRight,
   "6:ctrl" : dellRight,
-  "pad7:ctrl" : dellTopLeft,
-  "7:ctrl" : dellTopLeft,
+  "pad7:ctrl" : dellTopish,
+  "7:ctrl" : dellTopish,
   "pad8:ctrl" : dellTop,
   "8:ctrl" : dellTop,
-  "pad9:ctrl" : dellTopRight,
-  "9:ctrl" : dellTopRight,
+  "pad9:ctrl" : dellBottomish,
+  "9:ctrl" : dellBottomish,
   "pad/:ctrl" : dellBottom,
 
   // Resize Bindings
