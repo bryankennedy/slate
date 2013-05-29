@@ -54,9 +54,9 @@ var dellMidWide = dellFull.dup({ "x" : "screenSizeX/6", "width" : "screenSizeX/1
 
 // common layout hashes
 var lapMainHash = {
-  "operations" : [lapMain],
-  "ignore-fail" : true,
-  "repeat" : true
+        "operations" : [lapMain],
+        "ignore-fail" : true,
+        "repeat" : true
 };
 var adiumHash = {
   "operations" : [lapChat, lapMain],
