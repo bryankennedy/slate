@@ -54,6 +54,17 @@ S.bnda({ "left:ctrl;alt;cmd" : throwLeftFull })
 var throwRightFull = S.op("throw", { "screen" : "right", "width" : "screenSizeX", "height" : "screenSizeY" })
 S.bnda({ "right:ctrl;alt;cmd" : throwRightFull })
 
+var dellIsh = dellFull.dup({
+  "width" : "screenSizeX/1.2",
+  "height" : "screenSizeY/2.3",
+  "x" : "screenOriginX + screenSizeX/14"
+});
+var dellTopish = dellIsh.dup({ "y" : "screenOriginY + screenSizeY/20" });
+S.bnda({ "pad7:ctrl" : dellTopish, "7:ctrl" : dellTopish })
+
+var dellBottomish = dellIsh.dup({"y":"screenOriginY + ((screenSizeY/22)*11)"});
+S.bnda({ "pad9:ctrl" : dellBottomish, "9:ctrl" : dellBottomish })
+
 // Open the grid window sizer
 S.bnda({ "g:cmd;alt" : S.op("grid") })
 
@@ -65,10 +76,6 @@ S.bnda({
   // Basic Location Bindings
   //"pad1:ctrl" : dellBottomLeft,
   //"1:ctrl" : dellBottomLeft,
-  //"pad7:ctrl" : dellTopish,
-  //"7:ctrl" : dellTopish,
-  //"pad9:ctrl" : dellBottomish,
-  //"9:ctrl" : dellBottomish,
 
   //// Resize Bindings
   //// NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
@@ -114,17 +121,6 @@ S.bnda({
 
 });
 //var dellTop = dellFull.dup({ "height" : "screenSizeY/2" });
-//var dellIsh = dellFull.dup({
-        //"width" : "screenSizeX/1.2",
-        //"height" : "screenSizeY/2.3",
-        //"x" : "screenOriginX + screenSizeX/14"
-    //});
-//var dellTopish = dellIsh.dup({
-        //"y" : "screenOriginY + screenSizeY/20"
-    //});
-//var dellBottomish = dellIsh.dup({
-        //"y" : "screenOriginY + ((screenSizeY/22) * 11)"
-    //});
 //var dellTopLeft = dellTopish.dup({ "width" : "screenSizeX/1.2" });
 //var dellTopRight = dellTopLeft.dup({ "x" : "screenOriginX+screenSizeX/2" });
 //var dellBottomMid = dellBottomLeft.dup({ "x" : "screenOriginX+screenSizeX/3" });
