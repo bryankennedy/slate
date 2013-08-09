@@ -59,10 +59,10 @@ var dellIsh = dellFull.dup({
   "height" : "screenSizeY/2.3",
   "x" : "screenOriginX + screenSizeX/14"
 });
-var dellTopish = dellIsh.dup({ "y" : "screenOriginY + screenSizeY/20" });
+var dellTopish = dellIsh.dup({ "y" : "screenOriginY + screenSizeY/20 - screenSizeY/60" });
 S.bnda({ "pad7:ctrl" : dellTopish, "7:ctrl" : dellTopish })
 
-var dellBottomish = dellIsh.dup({"y":"screenOriginY + ((screenSizeY/22)*11)"});
+var dellBottomish = dellIsh.dup({"y":"screenOriginY + ((screenSizeY/22)*11) + screenSizeY/60"});
 S.bnda({ "pad9:ctrl" : dellBottomish, "9:ctrl" : dellBottomish })
 
 // Open the grid window sizer
